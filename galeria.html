@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Galeria de Fotos - Centro Terapêutico C.A.F</title>
+
+    <meta name="description" content="Galeria de fotos do Centro Terapêutico C.A.F em Sorocaba, especializado em tratamento de saúde mental, alcoolismo e dependência química. Veja nosso ambiente acolhedor e seguro." />
+    <meta name="keywords" content="clinica de recuperação, tratamento alcoolismo, dependência química, saúde mental, centro de reabilitação, galeria de fotos, Sorocaba" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.centroterapeuticocaf.com.br/galeria" />
+    <meta property="og:title" content="Galeria de Fotos - Centro Terapêutico C.A.F" />
+    <meta property="og:description" content="Um ambiente de paz, amor e esperança, feito para transformar vidas. Conheça nossa estrutura através das fotos." />
+    <meta property="og:image" content="https://scontent-gru1-1.cdninstagram.com/v/t51.2885-19/524217887_18024090830706865_4069446216961645426_n.jpg?stp=dst-jpg_s150x150_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLmRqYW5nby4zMjAuYzIifQ&_nc_ht=scontent-gru1-1.cdninstagram.com&_nc_cat=101&_nc_oc=Q6cZ2QF0gH-rhPdNOJnU8pBuCGVmLu1Lh09jeG_3p4ogf1qwe8G6ZFmFKl7_eHEqbMECZZU&_nc_ohc=EpqjcjwxURcQ7kNvwGN4xUb&_nc_gid=fpQ9GDPx-DVKyUe1zaHe4g&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AfUTsb0aSOLY8OwsSn7t12FEguMtLkgMdb3PizB0oAe-Vg&oe=68960C87&_nc_sid=8b3546" />
+
+    <link rel="icon" href="ico.ico" type="image/x-icon">
+
+    <style>
+        /* Reset básico */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0fff0; /* Verde bem claro, mais suave */
+            color: #0513d4;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #009118de;
+            color: #fff;
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 15px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        header img {
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
+        }
+
+        header h1 {
+            font-size: 1.8rem;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        header a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        header a:hover {
+            color: #d4ffd4;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 0 15px;
+        }
+
+        .animacao-texto {
+            font-size: 1.5rem;
+            text-align: center;
+            margin: 50px 0;
+            line-height: 1.6;
+            font-weight: bold;
+            color: #040806;
+        }
+
+        .animacao-texto span {
+            opacity: 0;
+            display: inline-block;
+            transform: translateY(20px);
+            animation: aparecer 0.6s forwards;
+        }
+
+        @keyframes aparecer {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            justify-items: center;
+        }
+
+        .gallery-item {
+            width: 100%;
+            max-width: 350px;
+            height: 250px;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out;
+            cursor: pointer;
+        }
+        
+        .gallery-item:hover {
+            transform: scale(1.05);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        #frase-final {
+            background-color: #e6ffe6;
+            padding: 30px 15px;
+            text-align: center;
+            margin-top: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .frase-animada {
+            font-size: 20px;
+            color: #0033cc;
+            font-family: Arial, sans-serif;
+            animation: fadeInUp 1.5s ease-out;
+            font-weight: bold;
+        }
+        
+        /* Animação de entrada */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        #contato {
+            background-color: #f9f9f9;
+            padding: 40px 20px;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+
+        #contato h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #222;
+        }
+
+        .pulsar {
+            display: inline-block;
+            font-weight: bold;
+            animation: pulsar 0.8s infinite;
+        }
+
+        @keyframes pulsar {
+            0% { transform: scale(1); text-shadow: 0 0 5px rgba(9, 255, 0, 0.6); }
+            50% { transform: scale(1.2); text-shadow: 0 0 15px rgba(9, 255, 0, 0.6); }
+            100% { transform: scale(1); text-shadow: 0 0 5px rgba(9, 255, 0, 0.6); }
+        }
+
+        #contato p {
+            font-size: 16px;
+            margin: 10px 0;
+        }
+
+        #contato a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        #contato a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px 10px;
+            background-color: #009118de;
+            color: white;
+            margin-top: 50px;
+        }
+
+        /* Botões flutuantes */
+        .fixed-buttons, .social-buttons {
+            position: fixed;
+            bottom: 20px;
+            z-index: 999;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .fixed-buttons {
+            left: 20px;
+        }
+
+        .social-buttons {
+            right: 20px;
+        }
+        
+        .fixed-buttons a {
+            background-color: #25d366;
+            color: white;
+            padding: 10px 14px;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            transition: transform 0.2s;
+        }
+        
+        .fixed-buttons img {
+            width: 24px;
+            height: 24px;
+            margin-right: 8px;
+        }
+
+        .social-buttons a {
+            background-color: white;
+            border-radius: 50%;
+            padding: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            transition: transform 0.2s;
+        }
+
+        .social-buttons img {
+            width: 30px;
+            height: 30px;
+        }
+
+        .fixed-buttons a:hover, .social-buttons a:hover {
+            transform: scale(1.1);
+        }
+
+        .bounce { animation: bounce 1.5s infinite; }
+        .pulse { animation: pulse 1.5s infinite; }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-5px); }
+            60% { transform: translateY(-3px); }
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(0,0,0,0.3); }
+            70% { transform: scale(1.1); box-shadow: 0 0 0 10px rgba(0,0,0,0); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(0,0,0,0); }
+        }
+
+        /* Responsividade para telas menores */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.3rem;
+                flex-basis: 100%;
+                text-align: center;
+            }
+            header {
+                justify-content: center;
+            }
+            .animacao-texto {
+                font-size: 1.2rem;
+            }
+            #contato h2 {
+                font-size: 22px;
+            }
+            #contato p {
+                font-size: 14px;
+            }
+            .fixed-buttons a {
+                font-size: 12px;
+                padding: 8px 10px;
+            }
+            .fixed-buttons img {
+                width: 20px;
+                height: 20px;
+            }
+        }
+         /* Estilo da frase final */
+  #frase-final {
+    background-color: #b2f2bb; /* verde claro suave, combinando com o site */
+    padding: 30px 15px;
+    text-align: center;
+    margin-top: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  }
+
+  .frase-animada {
+    font-size: 20px;
+    color: #0033cc; /* azul do texto principal do site */
+    font-family: Arial, sans-serif;
+    animation: fadeInUp 1.5s ease-out, pulsar 2s infinite;
+  }
+
+  /* Animação de entrada */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Efeito de pulsar suave */
+  @keyframes pulsar {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.03);
+    }
+  }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="ico.ico" alt="Logo Centro Terapêutico C.A.F" />
+    <h1>
+        Centro Terapêutico C.A.F - Galeria de Fotos
+    </h1>
+    <a href="index.html">Voltar</a>
+</header>
+
+<section>
+    <div class="animacao-texto">
+        <span style="animation-delay: 0s">Bem-vindo</span>
+        <span style="animation-delay: 0.2s">a</span>
+        <span style="animation-delay: 0.4s">um</span>
+        <span style="animation-delay: 0.6s">lugar</span>
+        <span style="animation-delay: 0.8s">onde</span>
+        <span style="animation-delay: 1s">o</span>
+        <span style="animation-delay: 1.2s">acolhimento</span>
+        <span style="animation-delay: 1.4s">não</span>
+        <span style="animation-delay: 1.6s">é</span>
+        <span style="animation-delay: 1.8s">uma</span>
+        <span style="animation-delay: 2s">regra,</span>
+        <span style="animation-delay: 2.2s">é</span>
+        <span style="animation-delay: 2.4s">a</span>
+        <span style="animation-delay: 2.6s">alma</span>
+        <span style="animation-delay: 2.8s">do</span>
+        <span style="animation-delay: 3s">nosso</span>
+        <span style="animation-delay: 3.2s">trabalho.</span>
+        <br>
+        <span style="animation-delay: 3.4s">Nossa</span>
+        <span style="animation-delay: 3.6s">base</span>
+        <span style="animation-delay: 3.8s">não</span>
+        <span style="animation-delay: 4s">é</span>
+        <span style="animation-delay: 4.2s">apenas</span>
+        <span style="animation-delay: 4.4s">o</span>
+        <span style="animation-delay: 4.6s">acolhimento,</span>
+        <span style="animation-delay: 4.8s">é</span>
+        <span style="animation-delay: 5s">o</span>
+        <span style="animation-delay: 5.2s">amor</span>
+        <span style="animation-delay: 5.4s">e</span>
+        <span style="animation-delay: 5.6s">o</span>
+        <span style="animation-delay: 5.8s">cuidado.</span>
+    </div>
+</section>
+
+<main>
+    <div class="gallery-container">
+        <div class="gallery-item"> <img src="centroterapeuticocaf1.jpeg" alt="Imagem 1" /> </div>
+        <div class="gallery-item"> <img src="centroterapeuticocaf2.jpeg" alt="Imagem 2" /> </div>
+        <div class="gallery-item"> <img src="centroterapeuticocaf3.jpeg" alt="Imagem 3" /> </div>
+        <div class="gallery-item"> <img src="centroterapeuticocaf4.jpeg" alt="Imagem 4" /> </div>
+        <div class="gallery-item"> <img src="centroterapeuticocaf5.jpeg" alt="Imagem 5" /> </div>
+        <div class="gallery-item"> <img src="centroterapeuticocaf6.jpeg" alt="Imagem 6" /> </div>
+        <div class="gallery-item"> <img src="centroterapeuticocaf7.jpeg" alt="Imagem 7" /> </div>
+        <div class="gallery-item"> <img src="centroterapeuticocaf8.jpeg" alt="Imagem 8" /> </div>
+        <div class="gallery-item"> <img src="centroterapeuticocaf9.jpeg" alt="Imagem 9" /> </div>
+        <div class="gallery-item"> <img src="centroterapeuticocaf10.jpeg" alt="Imagem 10" /> </div>
+        <div class="gallery-item"> <img src="centroterapeuticocaf11.jpeg" alt="Imagem 11" /> </div>
+        <div class="gallery-item"> <img src="centroterapeuticocaf12.jpeg" alt="Imagem 12" /> </div>
+        <div class="gallery-item"> <img src="centroterapeuticocaf13.jpeg" alt="Imagem 13" /> </div>
+        <div class="gallery-item"> <img src="centroterapeuticocaf18.jpeg" alt="Imagem 18" /> </div>
+        <div class="gallery-item"> <img src="centroterapeuticocaf15.jpeg" alt="Imagem 15" /> </div>
+        <div class="gallery-item"> <img src="centroterapeuticocaf16.jpeg" alt="Imagem 16" /> </div>
+        <div class="gallery-item"> <img src="centroterapeuticocaf17.jpeg" alt="Imagem 17" /> </div>
+        <div class="gallery-item"> <img src="centroterapeuticocaf19.jpeg" alt="Imagem 18" /> </div>
+        <div class="gallery-item"> <img src="centroterapeuticocaf20.jpeg" alt="Imagem 19" /> </div>
+        <div class="gallery-item"> <img src="centroterapeuticocaf21.jpeg" alt="Imagem 20" /> </div>
+        <div class="gallery-item"> <img src="centroterapeuticocaf22.jpeg" alt="Imagem 21" /> </div>
+        <div class="gallery-item"> <img src="centroterapeuticocaf23.jpeg" alt="Imagem 22" /> </div>
+        <div class="gallery-item"> <img src="centroterapeuticocaf24.jpeg" alt="Imagem 23" /> </div>
+        <div class="gallery-item"> <img src="centroterapeuticocaf25.jpeg" alt="Imagem 24" /> </div>
+        <div class="gallery-item"> <img src="centroterapeuticocaf26.jpeg" alt="Imagem 25" /> </div>
+        <div class="gallery-item"> <img src="centroterapeuticocaf27.jpeg" alt="Imagem 26" /> </div>
+        <div class="gallery-item"> <img src="centroterapeuticocaf30.jpeg" alt="Imagem 28" /> </div>
+    </div>
+</main>
+
+<section id="frase-final">
+    <p class="frase-animada">
+        <strong>Um ambiente de paz, amor e esperança, feito para transformar vidas. Venha conhecer de perto.</strong>
+    </p>
+</section>
+
+<section class="section" id="contato">
+    <div class="container">
+        <h2>
+            <strong class="pulsar">CONTATO</strong>
+        </h2>
+        <p>
+            📍 Endereço:
+            <a href="https://www.google.com/maps/dir//Av.+Francisco+Rold%C3%A3o+Sanches,+222,+Sorocaba+-+SP,+Brasil/data=!4m9!4m8!1m0!1m5!1m1!19sChIJWWCJ3JFgz5QRwwZ4h4NJ8Wg!2m2!1d-47.399562599999996!2d-23.4774015!3e0" target="_blank">
+                Avenida Francisco Roldão Sanches, Bairro Iporanga Nº 222 - Sorocaba - SP
+            </a>
+        </p>
+        <p>
+            📞 Telefone:
+            <a href="https://wa.me/5515991157658" target="_blank"> (15) 99115-7658 Andrews </a>
+        </p>
+        <p>
+            📞 Telefone:
+            <a href="https://wa.me/5518988206364" target="_blank"> (18) 98820-6364 Fábio </a>
+        </p>
+    </div>
+</section>
+
+<div class="fixed-buttons">
+    <a href="https://wa.me/5515991157658" target="_blank" class="bounce" title="WhatsApp Andrews">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+        Andrews
+    </a>
+    <a href="https://wa.me/5518988206364" target="_blank" class="bounce" title="WhatsApp Fabio">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+        Fábio
+    </a>
+</div>
+
+<div class="social-buttons">
+    <a href="https://www.instagram.com/ct_c.a.f/" target="_blank" title="Instagram" class="pulse">
+        <img src="Instagram1.png" alt="Instagram" />
+    </a>
+    <a href="https://www.facebook.com/people/CAT-CAF/61579054378470/" target="_blank" title="Facebook" class="pulse">
+        <img src="facebook1.jpg" alt="Facebook" />
+    </a>
+</div>
+
+<footer>
+    © 2025 Centro Terapêutico C.A.F - Todos os direitos reservados
+</footer>
+
+</body>
+</html>
